@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p8_layoutweb</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: 12.5% 25% 50% 12.5%;
+        }
+        nav{
+            grid-column-start:1;
+            grid-column-end:7;
+            background-color: yellow;
+        }
+        header{
+            grid-column: 1/7;
+            background-color:violet;
+        }
+        main{
+            grid-column: 1/6;
+            background-color: blue;
+        }
+        aside{
+            grid-column: 6/7;
+            background-color: mediumaquamarine;
+        }
+        footer{
+            grid-column: 1/7;
+            background-color: brown;
+        }
+        /*IPAD*/
+        @media only screen and (max-width=832px){
+            .container{
+                grid-template-columns:auto auto auto auto ;
+                grid-template-rows: 15% 25% 45% 15%;
+            }
+            main{
+                background-color: beige;
+            }
+        }
+        /*IPHONE 8*/
+        @media only screen and (max-width: 500px) {
+            .container{
+                grid-template-columns: auto auto ;
+                grid-template-rows: 15% 25% 45% 15%;
+            }
+            main {
+                background-color: rgb(21, 61, 61);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <p>menu nav</p>
+    </nav>
+    <header>
+        <p>header</p>
+    </header>
+    <main>
+        <p>main</p>
+    </main>
+    <aside>
+        <p>aside</p>
+    </aside>
+    <footer>
+        <p>footer</p>
+    </footer>
+    </div>
+</body>
+</html>
